@@ -53,7 +53,7 @@ mod test {
 
     #[test]
     fn test_simple_runlength_1() {
-        let encoded = SimpleRle::new().encode(&"aaabbc".bytes().collect::<Vec<u8>>());
+        let encoded = SimpleRle::new().encode("aaabbc".as_bytes());
         assert_eq!(Some(&3), encoded.get(0));
         assert_eq!(Some(&b'a'), encoded.get(1));
         assert_eq!(Some(&2), encoded.get(2));
