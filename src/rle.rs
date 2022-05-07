@@ -17,7 +17,7 @@ impl SimpleRle {
         code: &mut u8,
     ) -> usize {
         let mut offset = x;
-        *run = 1;
+        *run = 0;
         *code = data[offset];
         while offset < data.len() && *code == data[offset] && (*run as usize) < limit {
             offset += 1;
